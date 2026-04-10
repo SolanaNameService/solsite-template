@@ -1,0 +1,33 @@
+@import "@solana/wallet-adapter-react-ui/styles.css";
+@import "tailwindcss";
+
+/* Design tokens — edit here to retheme the entire app. */
+@theme {
+  --color-bg: #0f0f10;
+  --color-surface: #1a1a1f;
+  --color-border: #404045;
+  --color-text: #f0f0f0;
+  --color-muted: #888;
+  --color-accent: #512da8;
+  --color-green: #14f195;
+  --color-red: #f87171;
+  --color-blue: #1d9bf0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn {
+    @apply cursor-pointer rounded-lg border border-border bg-surface px-3 py-1.5 text-sm font-medium text-text;
+  }
+
+  .menu-item {
+    @apply w-full cursor-pointer rounded-md border-none bg-transparent px-3 py-2 text-left text-sm hover:bg-border;
+  }
+}
